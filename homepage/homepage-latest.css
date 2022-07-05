@@ -1,0 +1,316 @@
+.heading {
+    font-size: 26px;
+}
+
+
+.mobile-menu {
+    height: 25px !important;
+    width: 25px !important;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mobile-menu-exit {
+    float: right;
+    margin: .5em;
+}
+
+nav {
+    display: flex;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    left: 0;
+    top: 60px;
+    height: 100vh;
+}
+
+
+.navItem, .navItem_2 {
+    padding: 0.5em 0 .5em;
+    font-size: 1.3em;
+}
+
+.prop_4 {
+    height: 815px;
+}
+
+
+
+.prop_7 {
+    font-family: inherit;
+    height: 49px;
+    background: #fff;
+    border: solid .5px #dadada;
+    border-right: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-left: 15px;
+    float: left;
+    box-shadow: 0 2px 10px #dadada;
+}
+
+
+.prop_8 {
+    border-left: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 51px;
+    width: 60px;
+}
+
+.prop_9 {
+    display: none;
+}
+
+
+
+.prop_11 {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+}
+
+.navigation {
+    position: fixed;
+    left: -500px;
+    transition: .5s;
+    z-index: 999;
+}
+
+.navigation.acitve { 
+    left: 0px;
+}
+
+.hamburger.open {
+    display: none;
+}
+
+.bgImage {
+    background: url(../images/pexels-andrea-piacquadio-920382.jpg);
+    overflow: hidden;
+    background-position-x: -340px;
+    background-size: cover;
+}
+
+nav {
+  top: 0;
+  right: 0;
+  height: 100vh;
+  text-transform: uppercase;
+  transform: translateX(100%);
+  transition: transform .5s ease-in-out;
+}
+
+
+.open-nav {
+transform: translateX(0%);
+}
+
+
+
+/*card slider*/
+
+#slider {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  
+  #slider input[type=radio] {
+    display: none;
+  }
+  
+  
+  #slider label {
+    cursor:pointer;
+    text-decoration: none;
+  }
+  
+  
+  #slides {
+    background: transparent;
+    position: relative;
+    z-index: 1;
+  }
+  
+    
+  #overflow {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  
+  #slide1:checked ~ #slides .inner {
+    margin-left: 0;
+  }
+  
+  
+  #slide2:checked ~ #slides .inner {
+    margin-left: -100%;
+  }
+  
+  
+  #slide3:checked ~ #slides .inner {
+    margin-left: -200%;
+  }
+  
+  
+  #slide4:checked ~ #slides .inner {
+    margin-left: -300%;
+  }
+  
+  
+  #slides .inner {
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    width: 400%;
+    height: auto;
+  }
+  
+  
+  #slides .slide {
+    width: 25%;
+    float:left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100% 250px;
+    color: black;
+  }
+  
+  
+  p.slide-content {
+    color: var(--tertiary-black-font-color);
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  
+  #controls {
+    margin: -180px 0 0 0;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    position: relative;
+  }
+  
+  
+  #controls label {
+    transition: opacity 0.2s ease-out;
+    display: none;
+    width: 50px;
+    height: 50px;
+    opacity: .4;
+  }
+  
+  
+  #controls label:hover {
+    opacity: 1;
+  }
+  
+  
+  #slide1:checked ~ #controls label:nth-child(2),
+  #slide2:checked ~ #controls label:nth-child(3),
+  #slide3:checked ~ #controls label:nth-child(4),
+  #slide4:checked ~ #controls label:nth-child(1) {
+    background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
+    float:right;
+    margin: 0 -50px 0 0;
+    display: block;
+  }
+  
+  
+  #slide1:checked ~ #controls label:nth-last-child(2),
+  #slide2:checked ~ #controls label:nth-last-child(3),
+  #slide3:checked ~ #controls label:nth-last-child(4),
+  #slide4:checked ~ #controls label:nth-last-child(1) {
+    background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+    float:left;
+    margin: 0 0 0 -50px;
+    display: block;
+  }
+  
+  
+  #bullets {
+    margin: 125px 0 0;
+    text-align: flex-start;
+  }
+  
+  
+  #bullets label {
+    display: inline-block;
+    width: 20px;
+    height: 7px;
+    border-radius: 5px;
+    background: rgba(105, 120, 130, 0.473);
+    margin: 0 5px;
+  }
+  
+  
+  #slide1:checked ~ #bullets label:nth-child(1),
+  #slide2:checked ~ #bullets label:nth-child(2),
+  #slide3:checked ~ #bullets label:nth-child(3),
+  #slide4:checked ~ #bullets label:nth-child(4) {
+    background: #4c69f6;
+  }
+  
+  
+  @media screen and (max-width: 900px) {
+    #slide1:checked ~ #controls label:nth-child(2),
+    #slide2:checked ~ #controls label:nth-child(3),
+    #slide3:checked ~ #controls label:nth-child(4),
+    #slide4:checked ~ #controls label:nth-child(1),
+    #slide1:checked ~ #controls label:nth-last-child(2),
+    #slide2:checked ~ #controls label:nth-last-child(3),
+    #slide3:checked ~ #controls label:nth-last-child(4),
+    #slide4:checked ~ #controls label:nth-last-child(1) {
+       margin: 0;
+    }
+  
+    #slides {
+       /*max-width: calc(100% - 140px);*/
+       margin-bottom: 35px ;
+    }
+  }
+  
+
+  /*
+  <div class="flex justify-center bb b-grey">
+    <div class="pr16 pl16 w-100 prop_1 mw-1050 h60">
+        <div class="flex items-center h60">
+            <button class="h60 button-reset hamburger" onclick="show()"><svg xmlns="http://www.w3.org/2000/svg" class="flex h32 w32" viewBox="0 0 20 20" fill="#5e6d55">
+                <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+              </svg></button><!--onclick="show()"-->
+            <nav class="fixed w-60 h-100 w-100 pa16 flex flex-column bg-white bt b-grey navigation">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" id="mobileExit" class="mobile-menu-exit cursor-pointer mr-auto prl8 pb32 h24 w24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+
+                <ul class="ml16">
+                    <li><a class="navItem black tn tl db">Suchen</a></li>
+                    <li><a class="navItem black tn tl db" href="../register/register.html">Registrieren</a></li>
+                    <li><a class="navItem black tn tl db" href="../anmelden/anmelden.html">Anmelden</a></li>
+                </ul>
+
+                <ul class="ul ml16">
+                    <li class=""><a class="navItem_2 black tn db" href="#">Dienstleister&nbsp;werden</a></li>
+                </ul>
+            </nav>
+            <div class="flex justify-between h60 w-100">
+                <a class="blue heading ml16 ffb tn mt4 pt8 h60" href="../homepage/homepage.html">Camiri</a>
+                <a class="tn h60 flex items-center" href="#">
+                    <span class="black-light pr8 ffi" style="color: 5e6d55;">Login</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h24 w24" fill="none" viewBox="0 0 24 24" stroke="#5e6d55" stroke-width="2"><!--h-6 w-6-->
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                </a>
+            </div>
+            
+                
+            
+            
+        </div>
+    </div>
+</div>
